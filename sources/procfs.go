@@ -135,6 +135,9 @@ func (s *lustreSource) generateMDSMetricTemplates() error {
 			"kbytestotal":          "Capacity of the pool in kilobytes",
 			"quota_iused_estimate": "Returns '1' if a valid address is returned within the pool, referencing whether free space can be allocated",
 		},
+        "mdt": map[string]string{
+			"num_exports":          "Total number of times the pool has been exported",
+        },
 	}
 	for path, _ := range metricMap {
 		for metric, helpText := range metricMap[path] {
